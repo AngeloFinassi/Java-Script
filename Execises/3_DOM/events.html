@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+            background-color: rgb(192, 227, 140);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- evento HTML
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseleave="saiu()">
+        Interaja
+    </div> -->
+    <div id="area">
+        Interaja
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        
+        //eventos JS
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+        
+        // só vai disparar quando o método for ativado
+        function clicar() {
+            a.innerText = "Clicou!"
+        }
+        function entrou() {
+            a.innerText = "Entrou"
+        }
+        function saiu() {
+            a.innerText = "Interaja"
+        }
+    </script>
+</body>
+</html>

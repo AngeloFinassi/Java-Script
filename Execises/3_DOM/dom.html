@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doom in practice</title>
+    <style>
+        body {
+            background-color: bisque;
+            color: black;
+            font: normal 18px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos no DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em Mim</div>
+    <script>
+        //Pega elemestos com a tag 'p', [0] diz para pegar o primeiro
+        var p1 = window.document.getElementsByTagName('p')[0]
+        //Escreve oq esta dentro do 'p'
+        document.write(p1.innerText, '<br>')
+        //Muda a cor do elemento da variável
+        p1.style.color = 'blue'
+        
+        //body n precisa do get?
+        //Innertext pega o texto
+        //InnerHtml pega o conteúdo inteiro, vunerabilidade em
+        var corpo = window.document.body
+        corpo.style.background = 'yellow'
+
+        /* selector by get
+        //Forma de selecionar elementos pelo id, classes é =
+        var d = document.getElementById("msg")
+        d.style.background = 'green'
+        //modificar o texto dentro
+
+        //1 forma
+        // window.document.d.innerText = 'Modifiquei hehe, sou hackerman'
+        //2 forma
+        // window.document.getElementById("msg").innerText = "modifiquei aqui"
+        //3 forma
+        d.innerText = 'Modifiquei hehe, sou hackerman'
+
+        Ou posso usar a forma em css por query, sendo a mais recomendada em 2020 n sei agr né
+        //4 forma
+        */
+       var d = window.document.querySelector('div#msg')
+       d.style.color = 'green'
+    </script>
+</body>
+</html>
