@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+</head>
+<body>
+    <h1>Etnia Site Brasil Acima de tudo</h1>
+    <h2>e de todos</h2>
+    <input type="text" name="etnia1" id="pais1">
+    <input type="button" value="Verificar" onclick="Etnia()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function Etnia(){
+            var pais = document.getElementById("pais1").value.toLowerCase()
+            var res = document.getElementById("res")
+            if (pais == "brasileiro"){
+                res.innerHTML = ("Você é Brasileiro")
+            }
+            else{
+                res.innerHTML = ("Você é Estrangeiro, credo")
+            }
+        }
+    </script>
+</body>
+</html>
