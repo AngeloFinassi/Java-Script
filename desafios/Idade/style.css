@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+    text-align: center;
+
+}
+
+header{
+    color: rgba(255, 255, 255, 0.864);
+}   
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    background-color: white;
+    border-radius: 10px;
+    width: 500px;
+    padding: 15px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.507);
+}
+
+
+footer{
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.864);
+}
+
+div{
+    margin: auto;
+    padding: 10px;
+}
+
+div#imagem{
+    padding: 0px;
+    margin: 0px;
+}
+
+img#foto{
+    display: block;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    padding-top: 20px;
+}
