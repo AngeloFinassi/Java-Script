@@ -12,7 +12,7 @@ function Contar(){
         while (c <= 10) {
             let item = document.createElement("option")
             item.text = `${n1} X ${c} = ${n1 * c}`
-            //item.value = `${c}`
+            item.value = `${c}`
             table.appendChild(item)
             c ++
         }
