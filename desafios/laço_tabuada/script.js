@@ -2,7 +2,7 @@ function Contar(){
     var txtn1 = document.getElementById("n1")
     var table = document.getElementById("seltab")
 
-    if (txtn1.value.lenght == 0) {
+    if (txtn1.value.length == 0) {
         alert("Valor Inválido")   
     }
     else{
