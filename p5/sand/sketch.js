@@ -5,7 +5,9 @@ let sand_size = 5;
 let grid = [];
 let grid_x = canva_width / sand_size;
 let grid_y = canva_height / sand_size;
+
 let falling_sand = [];
+let stopped_sand = [];
 
 function setup() {
   createCanvas(canva_width, canva_height);
@@ -29,13 +31,19 @@ function draw() {
     let sand = falling_sand[i];
     sand.y += sand_size;
 
-    // Se o retângulo atingir o valor máximo da tela, removê-lo da lista
-    if (sand.y >= canva_height - sand_size) {
-      sand.y = canva_height - sand_size;
+    //Se a sand passar do máximo, adiciona no array stopede e remove do arr falling
+    if (sand.y >= canva_height) {
+      stopped_sand.push({ x: sand.x, y: canva_height - sand_size });
       falling_sand.splice(i, 1);
+    } else {
+      rect(sand.x, sand.y, sand_size, sand_size);
     }
+  }
 
-    rect(sand.x, sand.y, sand_size, sand_size);
+  //Desenha a sand que ultrapassou a tela
+  for (let k = 0; k < stopped_sand.length; k++) {
+    let stopped = stopped_sand[k];
+    rect(stopped.x, stopped.y, sand_size, sand_size);
   }
 }
 
@@ -48,3 +56,5 @@ function mouseClicked() {
     falling_sand.push({ x: x_coordinate * sand_size, y: y_coordinate * sand_size });
   }
 }
+
+console.log(stopped_sand)
