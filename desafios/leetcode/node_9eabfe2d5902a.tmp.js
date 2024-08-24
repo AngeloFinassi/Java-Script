@@ -10,7 +10,7 @@ while (l < nums.length) {
         k++
     }
     else{
-        nums.splice(l, 1)
+        nums.slice(l, 1)
     }
 }
 
